@@ -17,3 +17,13 @@ To run (from root directory):
 RAILS_ENV=development ruby script/tweet_timeline.rb <username>
 ```
 
+Look at:
+https://github.com/sferik/twitter/blob/master/lib/twitter/streaming/client.rb
+https://dev.twitter.com/discussions/399
+
+TODO:
+- Break rest api into seperate process that updates lists (maybe statuses?)
+  * catch 420 exceptions and pause for 15-30 min
+- Create seperate process for brute curling all statuses to get favorite/retweet counts (daily ?)
+- Maybe wrap these up in a rails or sinatra app to monitor/relaunch on a remote box
+- Work on front-end data mining tools (Rstudio shiny or d3)

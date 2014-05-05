@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140223214331) do
+ActiveRecord::Schema.define(:version => 20140321072654) do
+
+  create_table "user_lists", :force => true do |t|
+    t.text     "owner_id"
+    t.text     "owner_id_str"
+    t.text     "slug"
+    t.text     "name"
+    t.text     "uri"
+    t.text     "created_at",       :null => false
+    t.text     "id_str"
+    t.integer  "subscriber_count"
+    t.integer  "member_count"
+    t.text     "mode"
+    t.text     "full_name"
+    t.text     "description"
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "user_timelines", :force => true do |t|
     t.datetime "created_at",                :null => false
